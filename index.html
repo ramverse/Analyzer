@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LeetCode Analyzer</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>LeetCode Profile Analyzer</h1>
+      <button id="theme-toggle">🌙</button>
+    </div>
+
+    <input type="text" id="username" placeholder="Enter LeetCode username" />
+    <button onclick="getProfile()">Analyze</button>
+
+    <div class="favorites">
+      <h4>⭐ Favorites:</h4>
+      <ul id="fav-list"></ul>
+    </div>
+
+    <div id="profile" class="hidden">
+      <div class="user-info">
+        <img id="avatar" />
+        <h2 id="name"></h2>
+      </div>
+
+      <div class="stats">
+        <p>Total Solved: <span id="solved"></span></p>
+        <p>Easy: <span id="easy"></span></p>
+        <p>Medium: <span id="medium"></span></p>
+        <p>Hard: <span id="hard"></span></p>
+        <p>Acceptance Rate: <span id="acceptance"></span></p>
+        <p>Ranking: <span id="ranking"></span></p>
+      </div>
+
+      <canvas id="difficultyChart" width="400" height="200"></canvas>
+      <canvas id="submissionChart" width="400" height="200"></canvas>
+
+      <div class="contest-info">
+        <h3>Contest Rating</h3>
+        <p id="contest-rating">Coming soon...</p>
+      </div>
+
+      <div class="topics">
+        <h3>Popular Topics</h3>
+        <ul id="topics-list">
+          <li>Dynamic Programming</li>
+          <li>Greedy</li>
+          <li>DFS/BFS</li>
+          <li>Hash Table</li>
+          <li>Binary Search</li>
+        </ul>
+      </div>
+
+      <button onclick="saveFavorite()">⭐ Save to Favorites</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

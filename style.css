@@ -1,0 +1,74 @@
+:root {
+    --bg: #0f172a;
+    --text: #f1f5f9;
+    --card: #1e293b;
+    --accent: #3b82f6;
+  }
+  
+  body.light {
+    --bg: #f1f5f9;
+    --text: #0f172a;
+    --card: #ffffff;
+    --accent: #2563eb;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  .container {
+    background-color: var(--card);
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  input, button {
+    padding: 0.6rem;
+    border-radius: 8px;
+    margin: 0.5rem 0;
+    border: none;
+    font-size: 1rem;
+  }
+  
+  button {
+    background-color: var(--accent);
+    color: white;
+    cursor: pointer;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  
+  .user-info img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+  }
+  
+  .stats, .contest-info, .topics, .favorites {
+    margin-top: 1.5rem;
+  }
+  
+  #difficultyChart, #submissionChart {
+    margin-top: 1rem;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
